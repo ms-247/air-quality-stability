@@ -6,7 +6,7 @@ project:
   random_seed: 42
 
 data:
-  raw_path: data/raw/air_quality.csv      # remplacez par vos donnees reelles
+  raw_path: data/raw/air_quality.csv   
   processed_path: data/processed/
   target_column: pm25
   test_size: 0.2
