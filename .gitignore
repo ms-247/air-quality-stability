@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# .gitignore scientifique : on ne versionne ni caches, ni donnees brutes,
+# ni gros artefacts, tout en conservant l'ARCHITECTURE des dossiers.
+# ---------------------------------------------------------------------------
+
+# --- Caches et artefacts Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+
+# --- Environnements virtuels eventuels ---
+.venv/
+venv/
+env/
+
+# --- Donnees : on exclut TOUT le contenu de data/ ...
+data/**
+# ... mais on re-autorise les dossiers (pour que Git les traverse) ...
+!data/**/
+# ... et les sentinelles .gitkeep qui preservent l'architecture vide.
+!data/**/.gitkeep
+
+# --- Checkpoints Jupyter Notebook ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Fichiers systeme / IDE ---
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,17 @@
+name: air_quality_stability
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  # --- Librairies scientifiques indispensables ---
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  # --- Outil de test (Partie 3) ---
+  - pytest
+  - pip
+  - pip:
+      - logging-config

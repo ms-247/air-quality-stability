@@ -1,0 +1,24 @@
+# Configuration centrale du projet : aucun hyperparametre ne doit etre code "en dur"
+# dans les scripts. Tout passe par ce fichier (chemins, graine, modele...).
+
+project:
+  name: air_quality_stability
+  random_seed: 42
+
+data:
+  raw_path: data/raw/air_quality.csv      # remplacez par vos donnees reelles
+  processed_path: data/processed/
+  target_column: pm25
+  test_size: 0.2
+
+preprocessing:
+  handle_missing: median                  # strategie d'imputation
+  outlier_threshold: 1.5                   # facteur de Tukey pour les bornes IQR
+  scale_features: true                     # standardisation des features
+
+model:
+  type: random_forest
+  n_estimators: 100
+
+output:
+  figures_path: reports/figures/
